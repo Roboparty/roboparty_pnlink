@@ -1,0 +1,54 @@
+# Local runtime settings and environments
+.env
+.env.*
+!.env.example
+.venv*/
+venv/
+.runtime/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Calibration contains locally derived robot geometry and optional actor data.
+mocapapi_python/rp1/pn_axis_to_rp1_*.json
+!mocapapi_python/rp1/pn_axis_to_rp1_28dof.json
+!mocapapi_python/rp1/pn_axis_to_rp1_28dof_current.json
+!mocapapi_python/rp1/pn_axis_to_rp1_28dof_neutral.json
+*.json.tmp
+
+# Local model assets, unreviewed native libraries and generated recordings
+external/
+local_assets/
+/models/*
+!/models/README.md
+lib/
+*.so
+*.so.*
+*.dll
+*.dylib
+*.a
+*.lib
+/recordings/*
+!/recordings/README.md
+/mocapapi_python/recordings/
+outputs/
+output/
+*.npz
+*.bvh
+*.jsonl
+*.bag
+*.db3
+*.mcap
+core
+core.*
+
+# Only the two selected Linux PN SDK runtime libraries belong to this bundle.
+!/mocapapi_python/lib/
+/mocapapi_python/lib/*
+!/mocapapi_python/lib/librobotapi_x86-64.so
+!/mocapapi_python/lib/librobotapi_arm64.so

@@ -1,0 +1,4 @@
+# Python packages for the ROS bridge, recording and bundled SDK wrapper.
+# Install ROS 2 packages with apt; Linux native SDK libraries are bundled.
+numpy==1.23.5
+docutils==0.21.2

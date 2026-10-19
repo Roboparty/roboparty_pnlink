@@ -1,0 +1,11 @@
+# Tested Python 3.10 integration versions. The pinned minimal GMR runtime and
+# RP1.3.2 assets are bundled; no separate GMR checkout/install is needed.
+numpy==1.23.5
+scipy==1.15.3
+mujoco==3.4.0
+mink==1.0.0
+qpsolvers==4.8.2
+daqp==0.7.2
+# Imported by the unchanged bundled GMR motion_retarget.py.
+Cython==3.2.4
+rich==14.2.0

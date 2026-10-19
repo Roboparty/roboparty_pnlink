@@ -1,0 +1,423 @@
+{
+  "purpose": "PN-to-RP1 runtime bundle with minimal SDK, pinned GMR core and only RP1.3.2 assets; no old Git history or recordings.",
+  "license_status": "Project license selection deferred by owner; SDK retains its provider terms.",
+  "excluded": [
+    "old SDK backups and unused Windows DLL",
+    "other robot models and unused RP1 assets",
+    "real recordings and recording source identifiers",
+    "analysis experiment outputs and rosbags",
+    "virtual environments and caches",
+    "unrelated G1/H1 samples and vendor tools",
+    "old Git history"
+  ],
+  "files": {
+    ".env.example": {
+      "sha256": "f9d4461dba9e31c6cc273afd4d7dc7de99f8a6480cf0f842be6212b388f8f396",
+      "bytes": 1594
+    },
+    ".github/workflows/tests.yml": {
+      "sha256": "0b1a8f22086652e67e2fe5dae3b2290030b2f914f94d7a7ad4a7c8ae290311d6",
+      "bytes": 1503
+    },
+    ".gitignore": {
+      "sha256": "88acbf99b8c6e987b0c375d387f5af19bcb4e822c2783592d0330afff79c4ae9",
+      "bytes": 980
+    },
+    "PN_SDK_MANIFEST.json": {
+      "sha256": "bc68e23a7d1a6e1c02d8354a98b7a3a7223516beef41d2420d00a80c0250d271",
+      "bytes": 1270
+    },
+    "README.md": {
+      "sha256": "f737b8df45d1db496cec5b78fc707db85365c024a83681b06d5483313296f925",
+      "bytes": 14581
+    },
+    "RP1_MODEL_MANIFEST.json": {
+      "sha256": "ef8566f04f6a7e3d75605e75f4b34914a459a5b5bcc8a501e5e16a032f45437b",
+      "bytes": 6287
+    },
+    "assets/robots/rp1_description/meshes/base_link.STL": {
+      "sha256": "96ba7521e6b638bf66445a8ce84c83f5e2201921adb6567c8c77186224a6f5fd",
+      "bytes": 5980484
+    },
+    "assets/robots/rp1_description/meshes/left_ankle_pitch_link.STL": {
+      "sha256": "c28d2191ab8158921dc4c97f5c601463481c742982e68fe592c77086ac4ba659",
+      "bytes": 63484
+    },
+    "assets/robots/rp1_description/meshes/left_ankle_roll_link.STL": {
+      "sha256": "a30eadc6293bc01a9ba609e0ec0dd73128c7960d7ce84028cf9f208b77797d94",
+      "bytes": 1222184
+    },
+    "assets/robots/rp1_description/meshes/left_elbow_link.STL": {
+      "sha256": "a6139de9ee93f7a569966d32e05e2077658ed3fdb0af2ce97543f8568da153fe",
+      "bytes": 3225884
+    },
+    "assets/robots/rp1_description/meshes/left_hip_pitch_link.STL": {
+      "sha256": "4d3f42a4993546abf9db8548bf7fbd8c07d9b8ac1d1245aedbd7797473168161",
+      "bytes": 1472784
+    },
+    "assets/robots/rp1_description/meshes/left_hip_roll_link.STL": {
+      "sha256": "182e1c17450bbb0d7b23475bb40454eccb58c241a6a7956676d6856448257166",
+      "bytes": 3652884
+    },
+    "assets/robots/rp1_description/meshes/left_hip_yaw_link.STL": {
+      "sha256": "bdcd41e5bb648954bfafc842e5514b0c21facd4257c57d94edd5b48ba0986a20",
+      "bytes": 2761684
+    },
+    "assets/robots/rp1_description/meshes/left_knee_link.STL": {
+      "sha256": "c8773f8d663ca19fdad9bcf65c4e5b103205fcf71f8439177a66a639b08cacd9",
+      "bytes": 8297884
+    },
+    "assets/robots/rp1_description/meshes/left_shoulder_pitch_link.STL": {
+      "sha256": "762489f4151581769d5282a44ed7a0713729f58232b3c9572396a5ffdaacfda0",
+      "bytes": 1521784
+    },
+    "assets/robots/rp1_description/meshes/left_shoulder_roll_link.STL": {
+      "sha256": "ee1c70a7e3174fa128627138c5bc45448fa6be70e78aa8f68a6fdafe56b25834",
+      "bytes": 2014584
+    },
+    "assets/robots/rp1_description/meshes/left_shoulder_yaw_link.STL": {
+      "sha256": "7da2c2a19afe6b735bfce0b90cc13db2866025bfb1226b57e967ec3513127481",
+      "bytes": 1724984
+    },
+    "assets/robots/rp1_description/meshes/left_wrist_pitch_link.STL": {
+      "sha256": "a19f27f8d70277b9668501c62f094d7a9e8e8539d2e04eb0ca4197299e482c51",
+      "bytes": 5883934
+    },
+    "assets/robots/rp1_description/meshes/left_wrist_roll_link.STL": {
+      "sha256": "df5a1d4b3bbf7ad0b47d66524b702015b53f34e18c5d15362062673d767e4d01",
+      "bytes": 1252484
+    },
+    "assets/robots/rp1_description/meshes/left_wrist_yaw_link.STL": {
+      "sha256": "e94c894e2601ec8f824c05e6e8787c86fe414805b8790860600eab66a15993a7",
+      "bytes": 1796884
+    },
+    "assets/robots/rp1_description/meshes/right_ankle_pitch_link.STL": {
+      "sha256": "16cfa42efb30637bd69dad2507c87488e9c6a95570872081d55dec61b851c6de",
+      "bytes": 63484
+    },
+    "assets/robots/rp1_description/meshes/right_ankle_roll_link.STL": {
+      "sha256": "c6652d79355e217bd2bb4214847c1d14b40bb898c8ee47d8d346beefd6ead6b8",
+      "bytes": 1222184
+    },
+    "assets/robots/rp1_description/meshes/right_elbow_link.STL": {
+      "sha256": "e491173c87a43ef56a75b73e28f9c3245797866a7ea843176cc406287f4bc94d",
+      "bytes": 3225984
+    },
+    "assets/robots/rp1_description/meshes/right_hip_pitch_link.STL": {
+      "sha256": "10b922378deb7e1457faadf84534e94163c90c0fe2fcf7d1247b5da48f2405dc",
+      "bytes": 1476784
+    },
+    "assets/robots/rp1_description/meshes/right_hip_roll_link.STL": {
+      "sha256": "0404dcc006d0e90c3f6c3443dfc8f898a773a0ff4be8af23f2452e0f7d0b42fc",
+      "bytes": 3652884
+    },
+    "assets/robots/rp1_description/meshes/right_hip_yaw_link.STL": {
+      "sha256": "ca3a44857304d91cf12f8feee2f8a080082e57280d451287d9abb38533f5b827",
+      "bytes": 3002184
+    },
+    "assets/robots/rp1_description/meshes/right_knee_link.STL": {
+      "sha256": "948de10cde0b1dba834b18a021c691169c57276f22c8e36acd741580bd7f7886",
+      "bytes": 8283084
+    },
+    "assets/robots/rp1_description/meshes/right_shoulder_pitch_link.STL": {
+      "sha256": "4b5bd60dcbcf303a0cc38d18d08cb95c16dba069238db98e38b3c4f5b88b4d38",
+      "bytes": 1521484
+    },
+    "assets/robots/rp1_description/meshes/right_shoulder_roll_link.STL": {
+      "sha256": "b7dc61883819e8d2844227250e8e4c1a522b227ad83b3f8383580a342b2a734d",
+      "bytes": 2133184
+    },
+    "assets/robots/rp1_description/meshes/right_shoulder_yaw_link.STL": {
+      "sha256": "08a19c5bd9120ef84531b5cd63b8891658cad2fc7c5df46fe5c4087fae4c6c96",
+      "bytes": 1725284
+    },
+    "assets/robots/rp1_description/meshes/right_wrist_pitch_link.STL": {
+      "sha256": "36c0c2dcf53456af3b3d76baa6efa7e3f936d98139fb3b4f6d07eae0f52cba2e",
+      "bytes": 5794334
+    },
+    "assets/robots/rp1_description/meshes/right_wrist_roll_link.STL": {
+      "sha256": "aa36342edfe942946986f802e2cf3b249f733a39b842cff3db994b1d2972cbd1",
+      "bytes": 1252484
+    },
+    "assets/robots/rp1_description/meshes/right_wrist_yaw_link.STL": {
+      "sha256": "ae585dba731387dd0f39dafa90eabb2de37df61890ffe4da2233ff7d54d86eac",
+      "bytes": 1800084
+    },
+    "assets/robots/rp1_description/meshes/waist_roll_link.STL": {
+      "sha256": "8b952cde7a96d389b99ae0ad926ba1c7f380f3335857f9ab2831d6fa622a5f08",
+      "bytes": 1237784
+    },
+    "assets/robots/rp1_description/meshes/waist_yaw_link.STL": {
+      "sha256": "701f20ba36f352680f7abbdca836dfaedadc3f0182a0096b6a1595059293a425",
+      "bytes": 2500084
+    },
+    "assets/robots/rp1_description/mjcf/robot_28dof.teleop.xml": {
+      "sha256": "3de357cc73c7ccce0b08ba96ea8d1eee62e734d6811ebe492a6a8ae13c768232",
+      "bytes": 31907
+    },
+    "configs/presets/baseline.json": {
+      "sha256": "193aa7248060942005a622e50145aca4ef4c1f57d10d382a301535376954e978",
+      "bytes": 2155
+    },
+    "configs/presets/replay_acc100.json": {
+      "sha256": "81b1a88b988c3f50b1add2a6c39ebffc4beb6e75cc781769b7ed4733ebd06622",
+      "bytes": 1998
+    },
+    "configs/presets/replay_acc_off.json": {
+      "sha256": "21841ddd8d5a88745293640d9f5fa4c518350f55e17f0a83bfa4e1f0cfe653fa",
+      "bytes": 2039
+    },
+    "docs/ARCHITECTURE.md": {
+      "sha256": "9320f8cd7e9d9292aad13244a7d032f23110bbc72e4e066802f4fb4eeb43c6e0",
+      "bytes": 5386
+    },
+    "docs/CONFIGURATION.md": {
+      "sha256": "0275840b24c4584b9ef2bd1d4c6010c2ebd4dbfa5409751962de057e04a95f39",
+      "bytes": 12688
+    },
+    "docs/INSTALLATION.md": {
+      "sha256": "5ab292d16a085cf365e310c5ada7acafbe450f38ad83d2dcc56508869bf72988",
+      "bytes": 16314
+    },
+    "docs/RELEASE_CONTENTS.md": {
+      "sha256": "a947cbaf6fbdb7103ca3ef8a04288c584f96a3bf00703d21fd2b1432ad417af7",
+      "bytes": 5643
+    },
+    "docs/THIRD_PARTY.md": {
+      "sha256": "3da433c76f6c44c6f6e09036ff916ef6000af00c9b1ea455e7db445fe75333b3",
+      "bytes": 6336
+    },
+    "install.sh": {
+      "sha256": "4e9d348e6fd882689566aeac68a0d22ad36514abd92b4f6dc933cb5aed75fde6",
+      "bytes": 152
+    },
+    "mocapapi_python/lib/librobotapi_arm64.so": {
+      "sha256": "8c69886cd16e628904ba96496e2bf9fec41f3ac7817a07366f3c09e985992244",
+      "bytes": 2286920
+    },
+    "mocapapi_python/lib/librobotapi_x86-64.so": {
+      "sha256": "bee36adb6e070e8c013f51bdeac2a880e81626ec0cb31a86ccb1cae0a9bc5a8f",
+      "bytes": 3079624
+    },
+    "mocapapi_python/mocap_api.py": {
+      "sha256": "5daebcd9f5b02eeda9a926e905cbd33f6133d0acbd605446d7910d2e633a30c0",
+      "bytes": 56246
+    },
+    "mocapapi_python/mocap_main_base.py": {
+      "sha256": "da1fbc65f1c1bd7457755aa5e914b85fdc94205710f040bdff32aa7d1c7e77d3",
+      "bytes": 12034
+    },
+    "mocapapi_python/mocap_rp1_gmr_reference.py": {
+      "sha256": "934d583c500dcad3d3004616385b21fc52305a1f342706def7414974df1c3d09",
+      "bytes": 71724
+    },
+    "mocapapi_python/mocap_rp1_record.py": {
+      "sha256": "695791e85217fd8aa20c9cc82315eb6b4e5e3c76b62ac2546eb50324d7884ff7",
+      "bytes": 40322
+    },
+    "mocapapi_python/mocap_rp1_reference.py": {
+      "sha256": "f26003ac5e83f1650e438cb56324f63d5d20d0d91324446e2fa462f466b65a21",
+      "bytes": 29989
+    },
+    "mocapapi_python/pn_network.py": {
+      "sha256": "865ac87343e13fbb01c07fba8d2e8829815f3875dfd1018c444ce4437dc2646c",
+      "bytes": 8056
+    },
+    "mocapapi_python/pn_rp1_calibration.py": {
+      "sha256": "b119c7fe4a73ae8288c4fb7a8b42d56fcfcb67cdae46c82e90eda7ea03085b1e",
+      "bytes": 32873
+    },
+    "mocapapi_python/pn_rp1_kinematic_model.py": {
+      "sha256": "16cbe2ca7e84e7b0313f5018f8858a23f25383b7a8994a3803ab9f1fdc3f2cbf",
+      "bytes": 12994
+    },
+    "mocapapi_python/pn_rp1_paths.py": {
+      "sha256": "4669bf3efec85abacc96388d91b375a4d94de61b09016ea4c9659a30084c92ca",
+      "bytes": 5649
+    },
+    "mocapapi_python/pn_rp1_retarget.py": {
+      "sha256": "cd8db086a0345511b17d5ed92b3fc1e1ac4318d40c83c77873ae75ce7aec6f0f",
+      "bytes": 36146
+    },
+    "mocapapi_python/pn_sdk.py": {
+      "sha256": "674f9a26869a6f7edb20ccd6d22c93f4868733087a939e8d669ae833e0472e87",
+      "bytes": 10182
+    },
+    "mocapapi_python/rp1/README.md": {
+      "sha256": "0de537365b3cc72b0de514c6fb6e9d071471783e18c66452ffe772e9c2cfe7de",
+      "bytes": 699
+    },
+    "mocapapi_python/rp1/pn_axis_to_rp1_28dof.json": {
+      "sha256": "8d9db5a406c71e34fff7ec59c3aa79be48c8950ae95f08dd04bb81e17e4f451c",
+      "bytes": 43993
+    },
+    "mocapapi_python/rp1/pn_axis_to_rp1_28dof_current.json": {
+      "sha256": "8d9db5a406c71e34fff7ec59c3aa79be48c8950ae95f08dd04bb81e17e4f451c",
+      "bytes": 43993
+    },
+    "mocapapi_python/rp1/pn_axis_to_rp1_28dof_neutral.json": {
+      "sha256": "17d1c202e2c789048ff628c6c9bffeade4a03848668166012d577c2a0b928856",
+      "bytes": 43252
+    },
+    "mocapapi_python/rp1/publish.yaml": {
+      "sha256": "9a7839b9a6177d0c6d3e254a3b156b0e8de2ffcdfe5cc9b6674cb7ca7aac80dc",
+      "bytes": 1736
+    },
+    "mocapapi_python/rp1/retarget.json": {
+      "sha256": "964d2c64cd72d356430f91e7e14a0d83b5e1db033f4e68d448e7e7546106ab48",
+      "bytes": 10644
+    },
+    "mocapapi_python/view_rp1_gmr_3d.py": {
+      "sha256": "d93b2a4e90cc9b0c108290cb7c23dd9b3ea5f5bb20c9e740e479f3b082bcf2d6",
+      "bytes": 97683
+    },
+    "models/README.md": {
+      "sha256": "b19e15bd23db0e954ffa960244805925edba29bf0305baec49b48484442a10ec",
+      "bytes": 278
+    },
+    "pytest.ini": {
+      "sha256": "68cc02d81155019bdc652e0b91891ad26f399933f3b87930ecc172405f6b6f31",
+      "bytes": 192
+    },
+    "recordings/README.md": {
+      "sha256": "f89f6619d3c4a0748e334110e3627dee2d6f5381d832c6baa685210e003aa393",
+      "bytes": 215
+    },
+    "requirements-ik.txt": {
+      "sha256": "c9d2fe911b32dc97da936288e6b411e1e040019ccd1b4cbd1ff420a9d7941839",
+      "bytes": 322
+    },
+    "requirements-live.txt": {
+      "sha256": "017087019a6e12fd3d4acc3b3fd00106bbb75295a98fb414bf2a8f2e99a2f450",
+      "bytes": 179
+    },
+    "requirements-test.txt": {
+      "sha256": "5d2c63b4ae9d4c497a610fb4a16f4fa14bea83e5dbf8ff856706eee2a30dd47b",
+      "bytes": 126
+    },
+    "requirements-viewer.txt": {
+      "sha256": "15dd51916fa7f0f61765db5156ec07ecaf2e47b4edbb19c7f2b8e1dcdc90a123",
+      "bytes": 131
+    },
+    "requirements.txt": {
+      "sha256": "197af2428df1ed358650daafb3b6809a40391a6163809939b32f61c1eb751c75",
+      "bytes": 127
+    },
+    "run.sh": {
+      "sha256": "e1fecf3c0d2a45b01b74c3a91b15b11f1b5a54c947ede3e06d996298ead1e1f2",
+      "bytes": 255
+    },
+    "tests/test_calibration_templates.py": {
+      "sha256": "869c7bc866cb428762c8d6d9e3383d706087d32fc253e90eb4560ab469b87788",
+      "bytes": 13631
+    },
+    "tests/test_easy_setup.py": {
+      "sha256": "301754e18e7906fd8a9a3ee42eac5913082709af12bb6d7173f85e9ab1518ec1",
+      "bytes": 21317
+    },
+    "tests/test_pn_network.py": {
+      "sha256": "85432fe747d0c740c2c02e5006f1f0ad90625a104dff797f93d4872145ca2fb5",
+      "bytes": 28543
+    },
+    "tests/test_pn_rp1_joint_acceleration_ablation.py": {
+      "sha256": "1cd9abd37bea20bac04d7a3b9a75596d94a063958fa48704224de4b075dc7744",
+      "bytes": 11488
+    },
+    "tests/test_pn_rp1_paths.py": {
+      "sha256": "ff09cc7d7762f5ede631055eecc2ccaee882e693c568dcfb93fa17d3f00c6914",
+      "bytes": 8311
+    },
+    "tests/test_pn_rp1_root_motion_limits.py": {
+      "sha256": "9fce8b0a821522d9f67719e791c0e3064544cdd713e0eb43e885c8b71976e3e8",
+      "bytes": 7605
+    },
+    "tests/test_pn_sdk.py": {
+      "sha256": "116773a2f94590fb5bcabd568b9915d4bad4bf1959c2876a3a7711e11149d8cf",
+      "bytes": 15061
+    },
+    "tests/test_rp1_hand_topics.py": {
+      "sha256": "a0de97cada729e90a8d66e4bb4f5c8f5146755d2e208fd5f8ead3118503886bc",
+      "bytes": 12785
+    },
+    "tests/test_rp1_legacy_hand_topics.py": {
+      "sha256": "988a672b0e8c85dd7eac759849c08dfff75e002b7d0c3ef74447a0dc5a4ff78c",
+      "bytes": 7896
+    },
+    "tests/test_rp1_raw_source.py": {
+      "sha256": "5ea69d302f0b79432ba604ea41fe37aeca9e89b01fd24c1576b5df9865ba71e2",
+      "bytes": 12647
+    },
+    "tests/test_rp1_reference_height_offset.py": {
+      "sha256": "f270a229ed2d54d3a0f0136fd821cec96525b1b0d6fd0510ac998354e467d64a",
+      "bytes": 15679
+    },
+    "tests/test_rp1_reference_passthrough.py": {
+      "sha256": "b169b30cb5281bd7c9b4bf28403bc1094e0b1fbdae87ac3ea7f72c36cef3b8e3",
+      "bytes": 10483
+    },
+    "tests/test_view_rp1_direct_reference.py": {
+      "sha256": "e0bd9234267baabb10d867a8f70f322416898b3925ae8fc7179ba03b0ee48667",
+      "bytes": 2241
+    },
+    "tests/test_view_rp1_method_comparison.py": {
+      "sha256": "4dab4b728f11ee0c1c239b2fc22f6d1790c26dd09379c4f2514acdd397c6e94e",
+      "bytes": 8068
+    },
+    "tests/test_view_rp1_world_movement.py": {
+      "sha256": "68fc111e288a305525f06e553c9b88de33b46500c11a6d52e70e7dda621f2797",
+      "bytes": 5430
+    },
+    "third_party/GMR/LICENSE": {
+      "sha256": "7071fb3658e90406a0042d1e44cd92335072b11bd8dd292d7292765536534b39",
+      "bytes": 1056
+    },
+    "third_party/GMR/README.md": {
+      "sha256": "99984ab1dd657f9db8ab13d365ecbd3332e09147bf4d76c9e5154894b2f7050c",
+      "bytes": 2540
+    },
+    "third_party/GMR/SOURCE_METADATA.json": {
+      "sha256": "4ecf7ce02ec6eef048cb44c1d21befef92f3bbbf775fbe356dfefd7a51ec5e31",
+      "bytes": 2061
+    },
+    "third_party/GMR/general_motion_retargeting/__init__.py": {
+      "sha256": "dee5b3e8a449d62c79f8f2090e743c44646afaa1ca651e8586a2b69f5d8982dc",
+      "bytes": 699
+    },
+    "third_party/GMR/general_motion_retargeting/motion_retarget.py": {
+      "sha256": "88e130553af9e6d0cdbdcb90f03412c54be97ce86904cec55115e49702841f76",
+      "bytes": 12960
+    },
+    "third_party/GMR/general_motion_retargeting/params.py": {
+      "sha256": "1a2e91058e64782692222480fe79e1c991e4e46e868216250f84ba79431124dd",
+      "bytes": 656
+    },
+    "tools/check_environment.py": {
+      "sha256": "bca1647ea8971ef7bf4fc0cb7b9277eb55449919e10691f4a04d57c57a716436",
+      "bytes": 10638
+    },
+    "tools/check_release.py": {
+      "sha256": "095985029b5b2acbb2c6067110deb31b29c3db5a18df006147873e26bb81aab4",
+      "bytes": 7609
+    },
+    "tools/evaluate_recording.py": {
+      "sha256": "79336b3b9fd9944fecc99e8f597600cfa9abdbbfcc168f94b6fa386b85996ccb",
+      "bytes": 24174
+    },
+    "tools/make_demo_recording.py": {
+      "sha256": "d22e0e20a69708fac1f467b9d1ea8bcdd391ad0232ce74e1e3e187de803e87e2",
+      "bytes": 2918
+    },
+    "tools/prepare_calibration.py": {
+      "sha256": "a5d62829285abd15d4b6beb734a49d7c658ff047d5d4f8d7cfea4c84e6bcc1bf",
+      "bytes": 7530
+    },
+    "tools/setup_environment.py": {
+      "sha256": "06f0f08efed5c1397a574070d3414be8b9a5c9280fa6299901392a4b0fbb8442",
+      "bytes": 21762
+    },
+    "tools/start_live.py": {
+      "sha256": "375ed7c46882f269bb425c24281ba7be1947a9e48ed69c724d872cccccd46da1",
+      "bytes": 4843
+    }
+  }
+}

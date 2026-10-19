@@ -1,0 +1,4 @@
+# Unit tests and a bundled RP1/GMR model check; no hardware, ROS or Open3D.
+-r requirements-ik.txt
+viser==1.1.1
+pytest==9.0.3

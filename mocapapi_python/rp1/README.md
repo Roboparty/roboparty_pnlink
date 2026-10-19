@@ -1,0 +1,3 @@
+# Runtime configuration
+
+`publish.yaml` contains PN network and 50 Hz ROS interface settings. `retarget.json` contains RP1 joint names and the optional SDK retarget configuration. The two default calibration aliases retain the working deployment bone lengths, root reference, analytical standard T-pose and all algorithm settings. Recording source metadata is removed and the model path is repository-relative. The old public neutral default is preserved unchanged as `pn_axis_to_rp1_28dof_neutral.json`; select it with `--calibration`. Use `python tools/prepare_calibration.py` to preserve the current template, or write custom calibration to ignored `outputs/` and select it with `--calibration`.

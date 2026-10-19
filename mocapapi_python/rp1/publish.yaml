@@ -1,0 +1,42 @@
+# Topics and rates for mocap_rp1_reference.py and mocap_rp1_gmr_reference.py.
+# Reference matches roboparty_teleop configs/rp1_deploy/teleop_ros2_28dof.yaml:
+#   std_msgs/Float32MultiArray, 35 floats, RELIABLE KEEP_LAST.
+# Hands match the Pico message types in unified_teleop/tools/pico_topics.py:
+#   geometry_msgs/PoseArray plus std_msgs/Bool.
+# Each hand PoseArray contains raw PN-Link FINGERS ONLY: no Left/RightHand wrist.
+# Up to 19 poses, world frame, metres, quaternion xyzw. Order per side:
+# HandThumb1..3, then Index/Middle/Ring/Pinky: InHandFinger, HandFinger1..3.
+# Missing finger joints are omitted; active means at least one finger pose.
+# Wrist-only or unavailable input publishes an empty array and active=false.
+# This is not the 26-joint Pico layout; topics remain /mocap/hand/*.
+
+# PN UDP endpoints for the GMR bridge. local_ip belongs to this PC's PN-facing
+# interface; server_ip belongs to PN-Link. Editing this does not change a NIC.
+# Explicit --pn-* options override these; old PN_* env values are fallbacks only.
+pn_network:
+  local_ip: 10.42.0.101
+  local_port: 8002
+  server_ip: 10.42.0.202
+  server_port: 8080
+
+reference:
+  topic: /tracking/current_reference
+  rate_hz: 50
+  qos_depth: 21
+  reliability: reliable
+  transition_steps: 100
+  source_timeout_ms: 1000
+  # GMR only: world root Z offset in metres, after IK and before startup blending.
+  # Positive raises the robot; negative lowers it. Stand height stays unchanged.
+  root_z_offset_m: -0.04
+
+hands:
+  enabled: true
+  rate_hz: 50
+  frame_id: world
+  qos_depth: 1
+  reliability: best_effort
+  left_poses: /mocap/hand/left/poses
+  right_poses: /mocap/hand/right/poses
+  left_active: /mocap/hand/left/active
+  right_active: /mocap/hand/right/active

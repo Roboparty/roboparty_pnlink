@@ -1,0 +1,3 @@
+# Offline IK + browser visualization. Live SDK extras are optional/separate.
+-r requirements-ik.txt
+-r requirements-viewer.txt

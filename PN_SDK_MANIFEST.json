@@ -1,0 +1,32 @@
+{
+  "purpose": "Minimal PN SDK runtime bundle selected by the project owner.",
+  "origin": "https://github.com/pnmocap/mocapapi_python",
+  "notes": [
+    "Native libraries are copied unchanged from the current integration workspace.",
+    "Python interfaces include existing local network/input integration changes.",
+    "The provider license text was not present in the supplied SDK; no new SDK license is granted here.",
+    "Linux x86_64 import verified; aarch64 library included but not executed on an ARM host."
+  ],
+  "native_versions": {
+    "x86_64": "0.0.65.33a1385e",
+    "aarch64": "0.0.37.ba779e34"
+  },
+  "files": {
+    "mocapapi_python/mocap_api.py": {
+      "sha256": "5daebcd9f5b02eeda9a926e905cbd33f6133d0acbd605446d7910d2e633a30c0",
+      "bytes": 56246
+    },
+    "mocapapi_python/mocap_main_base.py": {
+      "sha256": "da1fbc65f1c1bd7457755aa5e914b85fdc94205710f040bdff32aa7d1c7e77d3",
+      "bytes": 12034
+    },
+    "mocapapi_python/lib/librobotapi_x86-64.so": {
+      "sha256": "bee36adb6e070e8c013f51bdeac2a880e81626ec0cb31a86ccb1cae0a9bc5a8f",
+      "bytes": 3079624
+    },
+    "mocapapi_python/lib/librobotapi_arm64.so": {
+      "sha256": "8c69886cd16e628904ba96496e2bf9fec41f3ac7817a07366f3c09e985992244",
+      "bytes": 2286920
+    }
+  }
+}

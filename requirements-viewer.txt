@@ -1,0 +1,6 @@
+numpy==1.23.5
+mujoco==3.4.0
+viser==1.1.1
+trimesh==4.11.1
+# CAD simplification on the first uncached viewer startup.
+open3d==0.19.0

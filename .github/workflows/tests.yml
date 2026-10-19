@@ -1,0 +1,49 @@
+name: Unit tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    runs-on: ubuntu-22.04
+    env:
+      PYTHONNOUSERSITE: "1"
+      PYNPUT_BACKEND: dummy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: |
+            requirements-test.txt
+            requirements-ik.txt
+            requirements-live.txt
+      - name: Install unit-test dependencies
+        run: python -m pip install -r requirements-test.txt -r requirements-live.txt
+      - name: Check release contents
+        run: python tools/check_release.py
+      - name: Check easy entry point without installing or opening a device
+        run: |
+          bash -n run.sh install.sh
+          ./install.sh --print-plan --no-viser
+          ./run.sh --help
+          ./run.sh setup --print-plan --no-viser
+          ./run.sh demo --print-plan --no-viser
+      - name: Run hardware-free unit tests
+        run: python -m pytest
+      - name: Check bundled model and one-frame IK without a device
+        run: python tools/check_environment.py --mode offline --no-viser
+      - name: Load bundled PN SDK without opening a device
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, "mocapapi_python")
+          from pn_sdk import load_sdk
+          api, base = load_sdk()
+          print("SDK loaded:", api.__file__, base.__name__)
+          PY

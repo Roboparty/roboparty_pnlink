@@ -1,0 +1,43 @@
+{
+  "component": "GMR PN-to-RP1 runtime subset",
+  "source_repository": "https://github.com/zerojuhao/GMR",
+  "original_package_project_url": "https://github.com/YanjieZe/GMR",
+  "source_commit": "d918bde83c5d72b0dbf979018793f6a74e529f10",
+  "source_package_version": "0.2.0",
+  "source_checkout_is_dirty": true,
+  "source_files_sha256": {
+    "general_motion_retargeting/motion_retarget.py": "88e130553af9e6d0cdbdcb90f03412c54be97ce86904cec55115e49702841f76",
+    "general_motion_retargeting/__init__.py": "eb7a658704164e03cf182bc57f863c7dc01f87b49c463cecc5c2f3f5d58b5502",
+    "general_motion_retargeting/params.py": "37759222cb13b12b9a69482a9bb9c757e51d4a38466902ea81bd92db8a5e095f",
+    "LICENSE": "7071fb3658e90406a0042d1e44cd92335072b11bd8dd292d7292765536534b39",
+    "setup.py": "7a6651e05767525ae1339082f896e0162f191b51a240a5dd4e17e6f6c42f02fe"
+  },
+  "verbatim_files": [
+    "general_motion_retargeting/motion_retarget.py",
+    "LICENSE"
+  ],
+  "modified_files": {
+    "general_motion_retargeting/__init__.py": "Replace eager full-package imports with task-construction exports only. No numeric algorithm changes.",
+    "general_motion_retargeting/params.py": "Empty runtime registries; PNToRP1Retargeter supplies its RP1.3.2 model and generated PN calibration. Other robots and human-source tables omitted."
+  },
+  "excluded": [
+    "other robot assets and IK mappings",
+    "viewers",
+    "SMPL-X/FBX/BVH/XRobot/OptiTrack tools",
+    "torch utilities",
+    "standalone package installation metadata",
+    "recordings and samples"
+  ],
+  "runtime_dependencies": [
+    "Cython",
+    "mink",
+    "mujoco",
+    "numpy",
+    "scipy",
+    "rich"
+  ],
+  "project_qp_backend": "daqp",
+  "license_file": "LICENSE",
+  "license_notice": "Copyright 2026 Roboparty; license reproduced verbatim from the source fork.",
+  "numeric_code_note": "The copied motion_retarget.py is byte-identical. The project uses its model/task construction and performs its existing single-step mink solve in pn_rp1_retarget.py; its legacy iterative retarget method is not called."
+}
